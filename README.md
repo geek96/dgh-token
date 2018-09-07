@@ -8,6 +8,12 @@ cd eos/
 sudo ./eosio_install.sh -s "EOS"
 ```
 
+### Add EOSIO binaries in path
+```bash
+PATH=$PATH:/usr/local/eosio/bin/
+```
+
+
 ### Build Smart Contract
 ```bash
 eosiocpp -o dgh.token.wast dgh.token.cpp
@@ -21,6 +27,6 @@ Creat eos account on testnet or mainnet
 
 ### Deploy
 ```bash
-cleos.sh set contract <your_eos_account> dgh.token/ -p <your_eos_account>@active
+cleos set contract <your_eos_account> dgh.token/ -p <your_eos_account>@active
 ```
 
