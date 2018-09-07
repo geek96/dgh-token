@@ -1,6 +1,14 @@
 # DGH Token
 
-### Build
+### Build EOSIO
+```bash
+git clone -b v1.2.4 --depth 1 https://github.com/EOSIO/eos.git --recursive
+
+cd eos/
+sudo ./eosio_install.sh -s "EOS"
+```
+
+### Build Smart Contract
 ```bash
 eosiocpp -o dgh.token.wast dgh.token.cpp
 ```
@@ -15,3 +23,4 @@ Creat eos account on testnet or mainnet
 ```bash
 cleos.sh set contract <your_eos_account> dgh.token/ -p <your_eos_account>@active
 ```
+
